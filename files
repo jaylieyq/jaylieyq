@@ -1,0 +1,5 @@
+Scanner sc = new Scanner(System.in);//输入"abc"
+String s1 = sc.next();
+String s2 = "abc";
+boolean res = s1.equals(s2);//equals的返回值是boolean类型
+System.out.println(res);//执行结果：true
