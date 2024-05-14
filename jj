@@ -1,0 +1,27 @@
+# referer列表
+referer_list = [
+    'http://fund.eastmoney.com/110022.html',
+    'http://fund.eastmoney.com/110023.html',
+    'http://fund.eastmoney.com/110024.html',
+    'http://fund.eastmoney.com/110025.html'
+]
+
+
+
+# 返回一个可用代理，格式为ip:端口
+# 该接口直接调用github代理池项目给的例子，故不保证该接口实时可用
+# 建议自己搭建一个本地代理池，这样获取代理的速度更快
+# 代理池搭建github地址https://github.com/1again/ProxyPool
+# 搭建完毕后，把下方的proxy.1again.cc改成你的your_server_ip，本地搭建的话可以写成127.0.0.1或者localhost
+def get_proxy():
+    data_json = requests.get("http://proxy.1again.cc:35050/api/v1/proxy/?type=2").text
+    data = json.loads(data_json)
+    return data['data']['proxy']
+
+
+# 获取所有基金代码
+def get_fund_code():
+    # 获取一个随机user_agent和Referer
+    header = {'User-Agent': random.choice(user_agent_list),
+              'Referer': random.choice(referer_list)
+    }
