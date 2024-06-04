@@ -1,0 +1,70 @@
+         // txt用户名
+            // 
+            this.txt用户名.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt用户名.Location = new System.Drawing.Point(132, 192);
+            this.txt用户名.Name = "txt用户名";
+            this.txt用户名.Size = new System.Drawing.Size(214, 26);
+            this.txt用户名.TabIndex = 3;
+            this.txt用户名.Text = "用户名";
+            this.txt用户名.Click += new System.EventHandler(this.txt用户名_Click);
+            // 
+            // txt密码
+            // 
+            this.txt密码.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt密码.Location = new System.Drawing.Point(132, 224);
+            this.txt密码.Name = "txt密码";
+            this.txt密码.Size = new System.Drawing.Size(214, 26);
+            this.txt密码.TabIndex = 4;
+            this.txt密码.Text = "密码";
+            this.txt密码.Click += new System.EventHandler(this.txt密码_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 192);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btn登录
+            // 
+            this.btn登录.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn登录.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn登录.ForeColor = System.Drawing.Color.White;
+            this.btn登录.Location = new System.Drawing.Point(132, 284);
+            this.btn登录.Name = "btn登录";
+            this.btn登录.Size = new System.Drawing.Size(214, 34);
+            this.btn登录.TabIndex = 6;
+            this.btn登录.Text = "登 录";
+            this.btn登录.UseVisualStyleBackColor = false;
+            this.btn登录.Click += new System.EventHandler(this.btn登录_Click);
+            // 
+            // ck记住密码
+            // 
+            this.ck记住密码.AutoSize = true;
+            this.ck记住密码.Checked = true;
+            this.ck记住密码.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ck记住密码.Font = new System.Drawing.Font("宋体", 10F);
+            this.ck记住密码.Location = new System.Drawing.Point(132, 256);
+            this.ck记住密码.Name = "ck记住密码";
+            this.ck记住密码.Size = new System.Drawing.Size(82, 18);
+            this.ck记住密码.TabIndex = 7;
+            this.ck记住密码.Text = "记住密码";
+            this.ck记住密码.UseVisualStyleBackColor = true;
+            this.ck记住密码.CheckedChanged += new System.EventHandler(this.ck记住密码_CheckedChanged);
+            // 
+            // ck自动登录
+            // 
+            this.ck自动登录.AutoSize = true;
+            this.ck自动登录.Cursor = System.Windows.Forms.Cursors.No;
+            this.ck自动登录.Font = new System.Drawing.Font("宋体", 10F);
+            this.ck自动登录.Location = new System.Drawing.Point(264, 256);
+            this.ck自动登录.Name = "ck自动登录";
+            this.ck自动登录.Size = new System.Drawing.Size(82, 18);
+            this.ck自动登录.TabIndex = 8;
+            this.ck自动登录.Text = "自动登录";
+            this.ck自动登录.UseVisualStyleBackColor = true;
+            // 
+     
