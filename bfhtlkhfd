@@ -1,0 +1,7 @@
+import html2pdf from 'html2pdf.js';
+ 
+// 获取要转换为PDF的DOM元素
+const element = document.getElementById('content');
+ 
+// 转换为PDF
+html2pdf(element);
