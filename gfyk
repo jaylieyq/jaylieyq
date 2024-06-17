@@ -1,0 +1,24 @@
+
+                type_element = son.find_elements(by=By.XPATH, value=".//div[@class='meta abstract']")  # 获取类型
+                if type_element:
+                    movieData['types'] = type_element[0].text
+                    sub_list[2] = movieData['types']
+
+                actors_element = son.find_elements(by=By.XPATH, value=".//div[@class='meta abstract_2']")  # 获取演员
+                if actors_element:
+                    movieData['actors'] = actors_element[0].text
+
+                jsonData.append(movieData)
+                res_list.append(sub_list)
+
+            for data in res_list:
+                print(data)
+
+            browser.quit()  # 关闭浏览器
+
+            return [res_list, jsonData]
+
+        except Exception as ex:
+            browser.quit()  # 关闭浏览器
+            err_str = "chromedriver驱动加载成功，但是出现其他未知异常：{}".format(ex)
+            return [err_str]
