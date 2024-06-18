@@ -1,0 +1,30 @@
+   if(nums[flg] >= target) {
+                right = flg; 
+                }
+class Solution {
+    
+    public int findMin(int[] nums) {
+        // 进行二分左查找 
+        int left= 0, right=nums.length-1;
+
+        // 以 最右边为基准值 进行 原数组的划分
+        int flg=nums[right];
+        while(left < right) {
+
+            // 得到中间 下标
+            int mid= left + (  (right - left ) >>> 1 );
+            
+            // 如果 小于 基准   说明 是 左边的数 ， 不存在最小值
+            if( nums[mid]  >  flg) {
+                left = mid +1;
+            } else {
+            // 存在 右边 小于或等于 基准值    
+                right =mid;
+            }
+        }  
+
+        
+        return nums[left];
+    }
+
+}
