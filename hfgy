@@ -1,0 +1,25 @@
+//1. 判断session中是否有user
+        HttpSession session = req.getSession();
+        Object user = session.getAttribute("user");
+
+        //2. 判断user是否为null
+        if(user != null){
+            // 登录过了
+            //放行
+            chain.doFilter(request, response);
+        }else {
+            // 没有登陆，存储提示信息，跳转到登录页面
+
+            req.setAttribute("login_msg","您尚未登陆！");
+            req.getRequestDispatcher("/login.jsp").forward(req,response);
+        }
+
+    }
+
+    public void init(FilterConfig config) throws ServletException {
+    }
+
+    public void destroy() {
+    }
+
+}
