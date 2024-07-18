@@ -1,0 +1,22 @@
+import requests
+ 
+login_url = 'http://example.com/login'
+data = {
+    'username': 'your_username',
+    'password': 'your_password'
+}
+ 
+# 创建会话对象
+session = requests.Session()
+ 
+# 发送登录请求
+response = session.post(login_url, data=data)
+ 
+# 检查登录是否成功
+if response.status_code == 200:
+    print("登录成功！")
+else:
+    print("登录失败！")
+ 
+# 使用 session 对象发送其他请求，保持登录状态
+response = session.get('http://example.com/protected_page')
